@@ -1,0 +1,15 @@
+{
+  "name": "domo-cards",
+  "version": "1.0.0",
+  "size": {
+    "width": 1,
+    "height": 1
+  },
+  "mapping": [
+    {
+      "dataSetId": "49f4e1cb-0704-4ca5-8d8a-f7235fcb185f",
+      "alias": "durationReportData",
+      "fields": []
+    }
+  ]
+}
