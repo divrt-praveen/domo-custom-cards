@@ -77,7 +77,7 @@ export default {
       this.$refs.monthPickerMenu.save(this.monthSelected);
       await window.domo.filterContainer([
         {
-          column: "exitMonthLabel",
+          column: "monthName",
           operator: "IN",
           values: [format(new Date(this.monthSelected), "MMMM yyyy")],
           dataType: "STRING",
