@@ -60,6 +60,7 @@
   
   <script>
   import { format } from "date-fns";
+  import { EventBus } from "@/lib/EventBus";
   export default {
     name: "HelloWorld",
     props: {
@@ -75,14 +76,7 @@
     methods: {
       async setMonthPicker() {
         this.$refs.monthPickerMenu.save(this.monthSelected);
-        await window.domo.filterContainer([
-          {
-            column: "exitMonthLabel",
-            operator: "IN",
-            values: [format(new Date(this.monthSelected), "MMMM yyyy")],
-            dataType: "STRING",
-          },
-        ]);
+        EventBus.$emit('apply-custom-filter', {column: 'monthName', value: format(new Date(this.monthSelected), "MMMM yyyy")})
         // window.domo.onFiltersUpdate(console.log);
   
       },
