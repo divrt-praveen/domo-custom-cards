@@ -16,7 +16,7 @@ export default {
     loading: false,
     reportData: [],
     headers: [
-      { text: "Exit Month Label", value: "exitMonthLabel" },
+      { text: "Month Name", value: "monthName" },
       { text: "Booking Id", value: "bid" },
       { text: "Booking State Label", value: "bookingStateLabel" },
       { text: "Entry time", value: "entryTime" },
